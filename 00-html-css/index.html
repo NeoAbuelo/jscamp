@@ -10,10 +10,13 @@
 
 <body>
   <header>
-    <h1>DevJobs</h1>
+    <h1>
+      <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brackets-angle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4l-5 8l5 8" /><path d="M16 4l5 8l-5 8" /></svg>
+      DevJobs</h1>
     <nav>
-      <a href="">Inicio</a>
-      <a href="">Empleos</a>
+      <a href="#">Inicio</a>
+      <!-- para referencia extena <a href="/insta" target="_blank" rel="noopener noreferrer">Insta</a> -->
+      <a href="./search.html">Empleos</a>
       <a href="">Empresas</a>
       <a href="">Salarios</a>
     </nav>
@@ -29,15 +32,17 @@
       <h1>Encuentra el trabajo de tus sueños</h1>
       <p>Únete a la comunidad más grande de desarrolladores y encuentra tu próxima oportunidad.</p>
       <form role="search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-          class="icon icon-tabler icons-tabler-outline icon-tabler-search">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-          <path d="M21 21l-6 -6" />
-        </svg>
-        <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
-        <button type="submit">Buscar</button>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
+          <button type="submit">Buscar</button>
+        </div>
       </form>
     </section>
     <section>
@@ -84,7 +89,14 @@
   <footer>
     <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
   </footer>
-
+ <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // Aquí puedes agregar la lógica para manejar la búsqueda
+      alert(`searching for ${form.text.value}`);
+    });
+  </script>
 
 </body>
 
