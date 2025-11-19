@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DevJobs - Empleos</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs.">
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+      <h1>
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="16 18 22 12 16 6"></polyline>
+      <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+      DevJobs</h1>
+       <nav>
+      <a href="./index.html">Inicio</a>
+      <a href="./search.html">Empleos</a>
+      <a href="">Empresas</a>
+      <a href="">Salarios</a>
+    </nav>
+
+      <div>
+        <a href="">Publicar un empleo</a>
+        <a href="">Iniciar sesión</a>
+      </div>
+    </header>
+  <main>
+    <section class="jobs-search">
+      <h1>Encuentra tu proximo trabajo</h1>
+      <p>Explora miles de oportunidades en el sector tecnilogicó</p>
+      <form role="search">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+           class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+           <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+           <path d="M21 21l-6 -6" />
+         </svg>
+         <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
+        </div>
+      </form>
+      <div>
+        <select id="tecnologia" name="tecnologia">
+            <option value="">Tecnologia</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="javascrip">Javascrip</option>
+        </select>
+        <select id="ubicacion" name="ubicacion">
+            <option value="">Ubicación</option>
+            <option value="chile">Chile</option>
+            <option value="españa">España</option>
+            <option value="argentina">Argentina</option>
+            <option value="peru">Peru</option>
+            <option value="remoto">Remoto</option>
+        </select>
+        <select id="contrato" name="contrato">
+            <option value="">Tipo de Contrato</option>
+            <option value="freelanse">Freelanse</option>
+            <option value="indefinido">Indefinido</option>
+        </select>
+        <select id="lvlexp" name="lvlexp">
+            <option value="">Nivel de Experiencia</option>
+            <option value="junior">Junior</option>
+            <option value="semiSenior">Semi Senior</option>
+            <option value="senior">Senior</option>
+        </select>
+    </div>
+    
+  </section>
+  <section >
+      <h2>Resultados de la búsqueda</h2>
+      <div class="jobs-listings">
+        <article class="job-listing-card">
+          <div>
+            <h2>Desarrollador Backend</h2>
+            <small>Empresa XYZ - Remoto</small>
+            <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
+          </div>
+          <button>Aplicar</button>
+        </article>
+        <article class="job-listing-card">
+          <div>
+            <h2>Desarrollador Frontend</h2>
+            <small>Empresa ABC - Madrid, España</small>
+            <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
+          </div>
+          <button>Aplicar</button>
+        </article>
+        <article class="job-listing-card">
+          <div>
+            <h2>Ingeniero de Datos</h2>
+            <small>Empresa DataTech - Buenos Aires, Argentina</small>
+            <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
+          </div>
+          <button>Aplicar</button>
+        </article>
+      </div>
+
+      <nav class="pagination">
+           <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 6l-6 6l6 6" />
+          </svg></a>
+          <a class="jump-page" href="#">Primera pagina</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a class="is-active" href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">7</a>
+          <a class="jump-page" href="#">Ultima pagina</a>
+          <a href="#"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+          </svg></a>
+        
+      </nav>
+
+      </section>
+  </main>
+  <footer>
+    <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+  </footer>
+</body>
+</html>
