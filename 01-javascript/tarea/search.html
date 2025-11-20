@@ -44,14 +44,14 @@
          <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
         </div>
       </form>
-      <div class="search-filters">
-        <select id="tecnologia" name="tecnologia">
-            <option value="">Tecnologia</option>
+      <div class="filter-jobs">
+        <select id="filter-tecnologia" name="tecnologia">
+            <option value="">Tecnología</option>
             <option value="python">Python</option>
             <option value="java">Java</option>
             <option value="javascrip">Javascrip</option>
         </select>
-        <select id="ubicacion" name="ubicacion">
+        <select id="filter-ubicacion" name="ubicacion">
             <option value="">Ubicación</option>
             <option value="chile">Chile</option>
             <option value="españa">España</option>
@@ -59,12 +59,12 @@
             <option value="peru">Peru</option>
             <option value="remoto">Remoto</option>
         </select>
-        <select id="contrato" name="contrato">
+        <select id="filter-contrato" name="contrato">
             <option value="">Tipo de Contrato</option>
             <option value="freelanse">Freelanse</option>
             <option value="indefinido">Indefinido</option>
         </select>
-        <select id="lvlexp" name="lvlexp">
+        <select id="filter-expeciencia-level" name="expeciencia-level">
             <option value="">Nivel de Experiencia</option>
             <option value="junior">Junior</option>
             <option value="semiSenior">Semi Senior</option>
@@ -74,12 +74,12 @@
     
   </section>
   <section >
-      <h2>Resultados de la búsqueda</h2>
+      <h2 class="title-jobs-listing">Resultados de la búsqueda</h2>
       <div class="jobs-listings">
         <article class="job-listing-card">
           <div>
             <h2>Desarrollador Backend</h2>
-            <small>Empresa XYZ - Remoto</small>
+            <small>Empresa XYZ | Remoto | Python</small>
             <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
           </div>
           <button class="button-apply-job" id ="boton-importante">Aplicar</button>
@@ -87,7 +87,7 @@
         <article class="job-listing-card">
           <div>
             <h2>Desarrollador Frontend</h2>
-            <small>Empresa ABC - Madrid, España</small>
+            <small>Empresa ABC | Madrid, España | JavaScript</small>
             <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
           </div>
           <button class="button-apply-job">Aplicar</button">
@@ -95,7 +95,7 @@
         <article class="job-listing-card">
           <div>
             <h2>Ingeniero de Datos</h2>
-            <small>Empresa DataTech - Buenos Aires, Argentina</small>
+            <small>Empresa DataTech | Buenos Aires, Argentina | Java</small>
             <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
           </div>
           <button class="button-apply-job">Aplicar</button">

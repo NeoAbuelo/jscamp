@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <title>DevJobs - Empleos</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs.">
     <link rel="stylesheet" href="./styles.css" />
-    <script type="module"  src="./script.js" ></script>
+    <script type="module" src="./script.js"></script>
 </head>
 <body>
   <header>
@@ -17,8 +17,8 @@
       </svg>
       DevJobs</h1>
        <nav>
-      <a href="">Inicio</a>
-      <a href="./search.html">Empleos</a>
+      <a href="./index.html">Inicio</a>
+      <a href="">Empleos</a>
       <a href="">Empresas</a>
       <a href="">Salarios</a>
     </nav>
@@ -32,7 +32,7 @@
     <section class="jobs-search">
       <h1>Encuentra tu proximo trabajo</h1>
       <p>Explora miles de oportunidades en el sector tecnilogicó</p>
-      <form role="search">
+      <form id="empleos-searh-form" role="search">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -41,64 +41,85 @@
            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
            <path d="M21 21l-6 -6" />
          </svg>
-         <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
+         <input name="search" id="empleos-search-input" required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
         </div>
-      </form>
-      <div class="search-filters">
-        <select id="tecnologia" name="tecnologia">
-            <option value="">Tecnologia</option>
-            <option value="python">Python</option>
+      <div>
+        <select id="filter-tecnologia" name="tecnologia">
+            <option value="">Tecnología</option>
+            <optgroup label="Tecnologías populares">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="react">React</option>
+              <option value="nodejs">Node.js</option>
+            </optgroup>
             <option value="java">Java</option>
-            <option value="javascrip">Javascrip</option>
+            <hr />
+            <option value="csharp">C#</option>
+            <option value="c">C</option>
+            <option value="c++">C++</option>
+            <hr />
+            <option value="ruby">Ruby</option>
+            <option value="php">PHP</option>
         </select>
-        <select id="ubicacion" name="ubicacion">
+        <select id="filter-ubicacion" name="ubicacion">
             <option value="">Ubicación</option>
             <option value="chile">Chile</option>
-            <option value="españa">España</option>
+            <option value="espana">España</option>
             <option value="argentina">Argentina</option>
             <option value="peru">Peru</option>
             <option value="remoto">Remoto</option>
         </select>
-        <select id="contrato" name="contrato">
+        <select id="filter-contrato" name="contrato">
             <option value="">Tipo de Contrato</option>
             <option value="freelanse">Freelanse</option>
             <option value="indefinido">Indefinido</option>
         </select>
-        <select id="lvlexp" name="lvlexp">
+        <select id="filter-experiencia" name="experiencia">
             <option value="">Nivel de Experiencia</option>
             <option value="junior">Junior</option>
             <option value="semiSenior">Semi Senior</option>
             <option value="senior">Senior</option>
         </select>
     </div>
-    
+    </form>
+    <span id="filter-selected-value"></span>
   </section>
-  <section >
+
+  <section>
       <h2>Resultados de la búsqueda</h2>
       <div class="jobs-listings">
-        <article class="job-listing-card">
+        <article 
+        data-modalidad="remoto"
+        data-tecnologia="python" 
+        class="job-listing-card">
           <div>
             <h2>Desarrollador Backend</h2>
             <small>Empresa XYZ - Remoto</small>
             <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
           </div>
-          <button class="button-apply-job" id ="boton-importante">Aplicar</button>
+          <button class="button-apply-job">Aplicar</button>
         </article>
-        <article class="job-listing-card">
+        <article 
+        data-modalidad="espana"
+        data-tecnologia="javascript" 
+        class="job-listing-card">
           <div>
             <h2>Desarrollador Frontend</h2>
             <small>Empresa ABC - Madrid, España</small>
             <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
           </div>
-          <button class="button-apply-job">Aplicar</button">
+          <button class="button-apply-job">Aplicar</button>
         </article>
-        <article class="job-listing-card">
+        <article 
+        data-modalidad="argentina"
+        data-tecnologia="java"
+        class="job-listing-card">
           <div>
             <h2>Ingeniero de Datos</h2>
             <small>Empresa DataTech - Buenos Aires, Argentina</small>
             <p>Buscamos un programados que pueda programaar y entras en el empresa asdjkasdaskdjaskdjasdkjasdlkasjdhkasjdhakls asdas dasd asd asd asdasd asdasda sd</p>
           </div>
-          <button class="button-apply-job">Aplicar</button">
+          <button class="button-apply-job">Aplicar</button>
         </article>
       </div>
 

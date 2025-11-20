@@ -1,5 +1,13 @@
 const jobListingSection = document.querySelector('.jobs-listings');
 
-jobListingSection.addEventListener('click', function(event) {
-    console.log('Job listing clicked');
-});
+if(jobListingSection) {
+    jobListingSection.addEventListener('click', function(event) {
+        const elemento = event.target;
+    
+        if (elemento.classList.contains('button-apply-job')) {
+            elemento.textContent = '¡Aplicado!';
+            elemento.classList.add('is-applied');
+            elemento.disabled = true;   
+        }
+    });
+}
