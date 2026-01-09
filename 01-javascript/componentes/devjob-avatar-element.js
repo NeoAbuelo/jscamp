@@ -5,12 +5,16 @@ class DevJobsAvatarElement extends HTMLElement {
         this.attachShadow({ mode: 'open' });
     }
     render(){
+        const service = this.getAttribute('service') ?? 'x';
+        const username = this.getAttribute('username') ?? 'midudev';
+        const size = this.getAttribute('size') ?? '40';
+
         this.shadowRoot.innerHTML = `
         <img
-            src="https://unavatar.io/x/neoabu_"
-            alt="Avatar de midudev"
+            src="https://unavatar.io/${service}/${username}"
+            alt="Avatar de ${username}"
             class="avatar"
-            style="width:40px; height:40px; border-radius:50%;"
+            style="width:${size}px; height:${size}px; border-radius:50%;"
         />
         `
     }
