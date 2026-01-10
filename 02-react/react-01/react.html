@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DevJobs - Empleos</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs.">
+    
+
+    <script type="module">
+      import React from 'https://esm.sh/react?dev';
+      import ReactDOM from 'https://esm.sh/react-dom/client?dev';
+      window.React = React;
+      window.ReactDOM = ReactDOM;
+    </script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"/></script>
+
+    <script type="text/babel" >  
+      const [isEncendido, setEstado ] = React.useState(false);
+      
+      function JobCard({ data, title, empresa, ubicacion, description }) {
+        function handleApply() {
+          alert(`Aplicando al trabajo: ${title}`);
+        }
+
+        return (
+          <article 
+          className="job-listing-card"
+          data-modalidad={data.modalidad}
+          data-nivel={data.nivel}
+          data-ubicacion={data.ubicacion}
+          data-tecnologia={data.technology}
+          >
+            <div>
+              <h3>{title}</h3>
+              <small>{empresa} - {ubicacion}</small>
+              <p>{description}</p>
+            </div>
+            <button 
+            className="button-apply-job"
+            onClick={handleApply}
+            >Aplicar</button>
+          </article>
+        );
+      }
+
+      function App() {
+        return (
+          <div className="jobs-listings">
+            <JobCard
+              data={{
+                modalidad: 'remoto',
+                nivel: 'junior',
+                ubicacion: 'global',
+                technology: 'react'
+              }} 
+              title="Desarrollador Frontend React" 
+              empresa="Tech Solutions" 
+              ubicacion="Remoto" 
+              description="Buscamos un desarrollador frontend con experiencia en React para unirse a nuestro equipo." />
+            
+          </div>
+        );
+      }
+
+      const rootEL = document.querySelector('#root');
+      const root = ReactDOM.createRoot(rootEL);
+      root.render(<App />);
+
+
+
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header>
+    <h1>
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="16 18 22 12 16 6"></polyline>
+      <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
+      DevJobs</h1>
+    <nav>
+      <a href="">Inicio</a>
+      <a href="./search.html">Empleos</a>
+      <a href="">Empresas</a>
+      <a href="">Salarios</a>
+    </nav>
+    <div>
+      <devjob-avatar  
+      service="x"
+      username="Neoabu_"
+      size="40" 
+      ></devjob-avatar>
+      <devjob-avatar  
+      service="x"
+      username="Midudev"
+      size="32" 
+      ></devjob-avatar>
+    </div>
+  </header>
+  <main>
+    <section class="jobs-search">
+      <h1>React primeros pasao </h1>
+    </section>
+    <section>
+    <h2>Ofertas de empleo</h2>  
+    <div id="root"></div>
+    </section>
+  </main>
+  <footer>
+    <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+  </footer>
+
+</body>
+</html>
